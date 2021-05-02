@@ -4,6 +4,6 @@
 if SHIELD_GHERKIN
 
 config ZMK_KEYBOARD_NAME
-    default "GHERKIN"
+    default "Gherkin"
 
 endif
