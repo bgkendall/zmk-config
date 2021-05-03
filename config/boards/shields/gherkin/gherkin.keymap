@@ -77,7 +77,7 @@
             bindings = <
                 &mt LCTRL TAB &kp LC(LS(TAB)) &kp UP &kp LC(TAB) &kp HOME   &kp PG_UP   &none       &none       &none       &kp DEL
                 &kp GRAVE   &kp LEFT    &kp DOWN    &kp RIGHT    &kp END    &kp PG_DN   &none       &none       &none       &kp KP_ENTER
-                &kp LSHFT   &kp K_CUT   &kp K_COPY  &kp K_PASTE  &trans     &trans      &none       &kp RGUI    &kp RALT    &kp LC(UP)
+                &kp LSHFT &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &trans  &trans      &none       &kp RGUI    &kp RALT    &kp LC(UP)
             >;
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
