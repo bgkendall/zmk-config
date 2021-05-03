@@ -77,9 +77,9 @@
             bindings = <
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
                 &kp RA(LBKT) &kp RA(LBRC) &kp RA(RBKT) &kp RA(RBRC) &none &kp RA(UNDER) &kp RA(MINUS) &kp RA(SEMI) &kp LCTRL &kp RCTRL
-                &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
+                &kp LSHFT   &kp LALT    &kp LGUI    &trans      &mo 7       &mo 7       &trans      &kp RGUI    &kp RALT    &kp CAPS
             >;
-            sensor-bindings = <&inc_dec_kp MINUS EQUAL>;
+            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
         };
 
     };
