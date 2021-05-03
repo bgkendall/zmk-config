@@ -79,7 +79,7 @@
                 &kp RA(LBKT) &kp RA(LBRC) &kp RA(RBKT) &kp RA(RBRC)  &none  &kp RA(UNDER) &kp RA(MINUS) &kp RA(SEMI) &kp LCRTL &kp RCTRL
                 &kp LSHFT   &kp LALT    &kp LGUI    &trans      &mo 7       &mo 7       &trans      &kp RGUI    &kp RALT    &kp CAPS
             >;
-            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
+            sensor-bindings = <&inc_dec_kp MINUS EQUAL>;
         };
 
     };
