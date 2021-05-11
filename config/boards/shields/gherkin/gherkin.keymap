@@ -12,6 +12,16 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
+#define CMK 0
+#define QWE 1
+#define FEA 2
+#define NUM 3
+#define SYC 4
+#define SYQ 5
+#define NAV 6
+#define FUN 7
+#define MET 8
+
 #define BTAB  LS(TAB)
 #define LDQUO RA(LBKT)
 #define RDQUO RA(LBRC)
@@ -31,52 +41,61 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0_colemak {
+        layer_ColeMaK {
             bindings = <
-                &mt LCTRL Q     &kp W       &kp D       &kp P       &kp G       &kp B       &kp L       &kp U       &kp Y       &kp BSPC
+                &mt LCTRL Q     &kp W       &kp D       &kp P       &kp G       &kp M       &kp L       &kp U       &kp Y       &kp BSPC
                 &kp A           &kp R       &kp S       &kp T       &kp F       &kp J       &kp N       &kp E       &kp I       &kp O
-                &mt LSHFT Z     &mt LALT X  &mt LGUI C  &lt 2 V     &lt 5 SPC   &lt 5 RET   &lt 3 H     &mt RGUI K  &mt RALT M  &mt RSHFT ESC
+                &mt LSHFT Z     &mt LALT X  &mt LGUI C  &lt NUM V   &lt NAV SPC &lt NAV RET &lt SYC H   &mt RGUI B  &mt RALT K  &mt RSHFT ESC
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        layer_1_qwerty {
+        layer_QWErty {
             bindings = <
                 &mt LCTRL Q     &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp BSPC
                 &kp A           &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI
-                &mt LSHFT Z     &mt LALT X  &mt LGUI C  &lt 2 V     &lt 5 SPC   &lt 5 RET   &lt 4 B     &mt RGUI N  &mt RALT M  &mt RSHFT ESC
+                &mt LSHFT Z     &mt LALT X  &mt LGUI C  &lt NUM V   &lt NAV SPC &lt NAV RET &lt SYQ B   &mt RGUI N  &mt RALT M  &mt RSHFT ESC
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        layer_2_number {
+        layer_Flip_Encoder_Axis {
+            bindings = <
+                &trans          &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                &trans          &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                &trans          &trans      &trans      &trans      &lt NAV SPC &lt NAV RET &trans      &trans      &trans      &trans
+            >;
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
+        };
+
+        layer_NUMber {
             bindings = <
                 &mt LCTRL TAB   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR    &kp RPAR
                 &kp N1          &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &kp LSHFT       &kp LALT    &kp LGUI    &trans      &kp EXCL    &kp QMARK   &mo 6       &kp COMMA   &kp DOT     &kp K_POWER
+                &kp LSHFT       &kp LALT    &kp LGUI    &trans      &kp EXCL    &kp QMARK   &mo FUN     &kp COMMA   &kp DOT     &kp K_POWER
             >;
             sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        layer_3_symbol_colemak {
+        layer_SYmbol_Colemak {
             bindings = <
                 &mt LCTRL DQT   &kp BSLH    &kp DOT     &kp PLUS    &kp GT      &kp MINUS   &kp LT      &kp UNDER   &kp QMARK   &kp DEL
                 &kp SQT         &kp COMMA   &kp SLASH   &kp GRAVE   &kp LBKT    &kp RBKT    &kp TILDE   &kp EQUAL   &kp PIPE    &kp SEMI
-                &kp LSHFT       &kp LALT    &kp LGUI    &mo 6       &kp LBRC    &kp RBRC    &trans      &kp COLON   &mt RALT MINUS &kp K_MUTE
+                &kp LSHFT       &kp LALT    &kp LGUI    &mo FUN     &kp LBRC    &kp RBRC    &trans      &kp MINUS   &mt RALT COLON &kp K_MUTE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        layer_4_symbol_qwerty {
+        layer_SYmbol_Qwerty {
             bindings = <
                 &mt LCTRL DQT   &kp BSLH    &kp EQUAL   &kp COMMA   &kp GRAVE   &kp QMARK   &kp UNDER   &kp PIPE    &kp SEMI    &kp DEL
                 &kp SQT         &kp SLASH   &kp DOT     &kp LBKT    &kp GT      &kp MINUS   &kp RBKT    &kp COLON   &kp LT      &kp PLUS
-                &kp LSHFT       &kp LALT    &kp LGUI    &mo 6       &kp LBRC    &kp RBRC    &trans      &kp TILDE   &mt RALT MINUS &kp K_MUTE
+                &kp LSHFT       &kp LALT    &kp LGUI    &mo FUN     &kp LBRC    &kp RBRC    &trans      &kp TILDE   &mt RALT MINUS &kp K_MUTE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        layer_5_navigation {
+        layer_NAVigation {
             bindings = <
                 &mt LCTRL TAB   &kp LC(BTAB) &kp UP     &kp LC(TAB)  &kp HOME   &kp PG_UP   &none       &none       &none       &kp DEL
                 &kp GRAVE       &kp LEFT    &kp DOWN    &kp RIGHT    &kp END    &kp PG_DN   &none       &none       &none       &kp KP_ENTER
@@ -85,20 +104,20 @@
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 
-        layer_6_function {
+        layer_FUNction {
             bindings = <
                 &kp F1          &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
-                &kp LDQUO       &kp RDQUO   &kp LSQUO   &kp RLQUO   &none       &kp MDASH   &kp NDASH   &kp ELLIP   &kp LCTRL   &kp RCTRL
-                &kp LSHFT       &kp LALT    &kp LGUI    &trans      &mo 7       &mo 7       &trans      &kp RGUI    &kp RALT    &kp CAPS
+                &kp LDQUO       &kp RDQUO   &kp LSQUO   &kp RLQUO   &tog FEA    &kp MDASH   &kp NDASH   &kp ELLIP   &kp LCTRL   &kp RCTRL
+                &kp LSHFT       &kp LALT    &kp LGUI    &trans      &mo MET     &mo MET     &trans      &kp RGUI    &kp RALT    &kp CAPS
             >;
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
         };
 
-        layer_7_meta {
+        layer_METa {
             bindings = <
-                &to 1           &none       &none       &none       &none       &none       &none       &none       &none       &bootloader
+                &to QWE         &none       &none       &none       &none       &none       &none       &none       &tog FEA    &bootloader
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none      &none       &none       &none       &bt BT_CLR
-                &out OUT_TOG    &none       &to 0       &trans      &trans      &trans      &trans      &none  &rgb_ug RGB_TOG  &ext_power EP_TOG
+                &out OUT_TOG    &none       &to CMK     &trans      &trans      &trans      &trans      &none  &rgb_ug RGB_TOG  &ext_power EP_TOG
             >;
         };
     };
