@@ -43,8 +43,8 @@
 
         layer_ColeMaK {
             bindings = <
-                &mt LCTRL Q     &kp W       &kp D       &kp P       &kp G       &kp M       &kp L       &kp U       &kp Y       &kp BSPC
-                &kp A           &kp R       &kp S       &kp T       &kp F       &kp J       &kp N       &kp E       &kp I       &kp O
+                &mt LCTRL Q     &kp W       &kp D       &kp P       &kp F       &kp J       &kp L       &kp U       &kp Y       &kp BSPC
+                &kp A           &kp R       &kp S       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp O
                 &mt LSHFT Z     &mt LALT X  &mt LGUI C  &lt NUM V   &lt NAV SPC &lt NAV RET &lt SYC H   &mt RGUI B  &mt RALT K  &mt RSHFT ESC
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -79,8 +79,8 @@
 
         layer_SYmbol_Colemak {
             bindings = <
-                &mt LCTRL DQT   &kp BSLH    &kp DOT     &kp PLUS    &kp GT      &kp MINUS   &kp LT      &kp UNDER   &kp QMARK   &kp DEL
-                &kp SQT         &kp COMMA   &kp SLASH   &kp GRAVE   &kp LBKT    &kp RBKT    &kp TILDE   &kp EQUAL   &kp PIPE    &kp SEMI
+                &mt LCTRL DQT   &kp BSLH    &kp DOT     &kp PLUS    &kp LBKT    &kp RBKT    &kp LT      &kp UNDER   &kp QMARK   &kp DEL
+                &kp SQT         &kp COMMA   &kp SLASH   &kp GRAVE   &kp GT      &kp MINUS   &kp TILDE   &kp EQUAL   &kp PIPE    &kp SEMI
                 &kp LSHFT       &kp LALT    &kp LGUI    &mo FUN     &kp LBRC    &kp RBRC    &trans      &kp MINUS   &mt RALT COLON &kp K_MUTE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
