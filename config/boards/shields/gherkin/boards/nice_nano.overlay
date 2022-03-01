@@ -21,20 +21,30 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <2>; /* number of LEDs */
+        chain-length = <1>; /* number of LEDs */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
     };
 };
 
+&pwm0 {
+    status = "okay";
+    ch0-pin = <38>;
+    /* ch0-inverted; */
+};
+
 / {
     chosen {
         zmk,underglow = &led_strip;
+        zmk,backlight = &backlight;
     };
 
-    ext-power {
-        /* Use pin 1.06 (ProMicro B5) as "power" control pin instead of 0.13.
-           Instead of switching power, it will switch the key LEDs on/off */
-        control-gpios = <&gpio1 6 GPIO_ACTIVE_LOW>;
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        label = "Backlight LEDs";
+        pwm_led_0 {
+            pwms = <&pwm0 38>;
+            label = "Backlight LED 0";
+        };
     };
 };
