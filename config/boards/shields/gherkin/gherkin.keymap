@@ -147,7 +147,7 @@
             bindings = <&kp MINUS>, <&kp PLUS>;
             mods = <MOD_LSFT>;
         };
-        slast: slask_astrk {
+        slast: slash_astrk {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_ASTRK";
             #binding-cells = <0>;
