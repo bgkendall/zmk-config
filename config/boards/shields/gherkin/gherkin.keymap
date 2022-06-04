@@ -119,6 +119,13 @@
             bindings = <&kp COMMA>, <&kp EXCL>;
             mods = <MOD_LSFT>;
         };
+        comlp: comma_paren {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_PAREN";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LPAR>;
+            mods = <MOD_LSFT>;
+        };
         comqm: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QMARK";
@@ -126,18 +133,25 @@
             bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <MOD_LSFT>;
         };
-        dotqm: dot_qmark {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_QMARK";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp QMARK>;
-            mods = <MOD_LSFT>;
-        };
         dotex: dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_EXCL";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp EXCL>;
+            mods = <MOD_LSFT>;
+        };
+        dotrp: dot_paren {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_PAREN";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp RPAR>;
+            mods = <MOD_LSFT>;
+        };
+        dotqm: dot_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_QMARK";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp QMARK>;
             mods = <MOD_LSFT>;
         };
         minpl: minus_plus {
@@ -177,9 +191,9 @@
 */
         layer_AVeraK {
             bindings = <
-                &gravq          &tabw       &stabr      &kp P       &kp F       &kp J       &kp Y       &kp O       &kp L       &bsdel
+                &gravq          &tabw       &stabr      &kp P       &kp Y       &kp J       &kp F       &kp O       &kp L       &bsdel
                 &kp A           &kp S       &kp D       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp U
-                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &kp COMMA   &kp DOT     &kp H       &mt RALT B  &mt RGUI K  &mt RSHFT ESC
+                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &comlp      &dotrp      &kp H       &mt RALT B  &mt RGUI K  &mt RSHFT ESC
                             &mt LALT SLASH  &kp LGUI    &lt NUM TAB     &lt NAV SPC         &lt FUN RET &mt RCTRL MINUS
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -189,7 +203,7 @@
             bindings = <
                 &gravq          &tabw       &kp D       &kp P       &kp F       &kp J       &kp L       &kp U       &kp Y       &bsdel
                 &kp A           &kp R       &kp S       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp O
-                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &kp COMMA   &kp DOT     &kp H       &mt RALT B  &mt RGUI K  &mt RSHFT ESC
+                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &comlp      &dotrp      &kp H       &mt RALT B  &mt RGUI K  &mt RSHFT ESC
                             &mt LALT SLASH  &kp LGUI    &lt NUM TAB     &lt NAV SPC         &lt FUN RET &mt RCTRL MINUS
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -199,7 +213,7 @@
             bindings = <
                 &gravq          &tabw       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &bsdel
                 &kp A           &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI
-                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &kp COMMA   &kp DOT     &kp B       &mt RALT N  &mt RGUI M  &mt RSHFT ESC
+                &mt LSHFT Z     &mt LCTRL X &kp C       &kp V       &comlp      &dotrp      &kp B       &mt RALT N  &mt RGUI M  &mt RSHFT ESC
                             &mt LALT SLASH  &kp LGUI    &lt NUM TAB     &lt NAV SPC         &lt FUN RET &mt RCTRL MINUS
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -230,7 +244,7 @@
         layer_NUMber {
             bindings = <
                 &kp DQT         &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp LBKT    &kp RBKT    &kp AMPS    &kp ASTRK   &kp PLUS    &trans
-                &lt PAD SQT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp LPAR    &kp RPAR    &kp DLLR    &kp EQUAL   &kp PIPE    &kp CARET
+                &lt PAD SQT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp LT      &kp GT      &kp DLLR    &kp EQUAL   &kp PIPE    &kp CARET
                 &mt LSHFT KP_DOT &kp KP_N1  &kp KP_N2   &kp KP_N3   &kp SEMI    &kp COLON   &kp HASH    &kp EXCL    &mt RGUI AT &kp K_MUTE
                            &mt LALT BSLH &mt LGUI KP_N0 &trans           &kp SPACE          &lt MET KP_ENTER &mt RCTRL TILDE
             >;
@@ -303,7 +317,7 @@
                 &kp F1          &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
                 &kp LDQUO       &kp RDQUO   &kp LSQUO   &kp RLQUO  &kp LG(DLLR) &kp MDASH   &kp NDASH   &kp ELLIP   &tog FEA    &kp PRCNT
                 &kp LSHFT       &kp LCTRL   &none       &kp INS     &kp LBRC    &kp RBRC    &kp C_PP    &kp RALT    &kp RGUI    &kp CAPS
-                                &kp LALT    &kp LGUI    &mo MET          &kp SPACE          &kp RET     &kp RCTRL
+                                &kp LALT    &kp LGUI    &mo MET          &kp SPACE          &kp trans   &kp RCTRL
             >;
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
         };
