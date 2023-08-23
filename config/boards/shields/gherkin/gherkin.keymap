@@ -61,12 +61,6 @@
 
 / {
     behaviors {
-        enc_bl: behavior_sensor_rotate_bl {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_BL";
-            #sensor-binding-cells = <2>;
-            bindings = <&bl>, <&bl>;
-        };
 
         bsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
@@ -388,7 +382,7 @@
                                                     &trans          &bl BL_TOG         &trans
 
             >;
-            sensor-bindings = <&enc_bl BL_DEC BL_INC>;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
     };
 };
