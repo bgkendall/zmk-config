@@ -17,8 +17,9 @@
 #define FUNC 3
 #define NAVI 4
 #define NUMB 5
-#define MET  6
-#define NUMX 7
+#define NUML 6
+#define MET  7
+#define NUMX 8
 
 #define LDQUO   RA(LBKT)
 #define RDQUO   RA(LBRC)
