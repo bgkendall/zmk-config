@@ -235,6 +235,14 @@
     };
 
     macros {
+        m000: macro000 {
+            label = "macro000";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp KP_N0 &kp KP_N0 &kp KP_N0>
+                ;
+        };
         m1: macro1 {
             label = "macro1";
             compatible = "zmk,behavior-macro";
@@ -302,7 +310,7 @@
 
         layer_FUNCtion {
             bindings = <
-                &kp xxx     &kp xxx     &kp F3      &kp LSQUO   &kp F5      &kp F6      &kp AMPS    &kp ASTRK &kp LG(LS(Y)) &kp F10
+                &kp K_WWW   &kp K_WWW   &kp F3      &kp LSQUO   &kp F5      &kp F6      &kp AMPS    &kp ASTRK &kp LG(LS(Y)) &kp F10
                 &kp LDQUO   &kp RDQUO   &kp LG(S)   &kp RSQUO   &kp AT      &kp MDASH   &kp NDASH   &kp ELLIP   &kp PIPE    &kp CARET
                 &kp LG(Z)   &kp LG(X)   &LG(C)      &kp LG(V)   &bgk1       &kp GRAVE   &kp HASH    &kp BSLH    &kp FSLH    &kp CAPS
                                                     &trans          &trans              &mo MET
@@ -312,9 +320,9 @@
 
         layer_NAVIgation {
             bindings = <
-                &kp TAB &kp LC(LS(TAB)) &kp UP      &kp LC(TAB) &kp HOME    &kp PG_UP   &kp TILDE   &kp N0      xxx         &kp EQUAL
+                &kp TAB &kp LC(LS(TAB)) &kp UP      &kp LC(TAB) &kp HOME    &kp PG_UP   &kp TILDE   &kp N0      &kp m000    &kp EQUAL
                 &kp GRAVE   &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_DN   &kp RSHIFT  &kp RGUI    &kp RALT    &kp RCTRL
-               &mt LSHFT N2 &kp N4      &xxx        &kp INSERT  &kp LBRC    &kp RBRC    &kp FSLH    &none       &kp none    &to FEAX
+               &mt LSHFT N2 &kp N4 &kp LG(LA(LCTRL)) &kp INSERT &kp LBRC    &kp RBRC    &kp FSLH    &none       &kp none    &to FEAX
                                                     &kp LGUI        &trans              &kp RETURN
             >;
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
