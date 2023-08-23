@@ -312,7 +312,7 @@
             bindings = <
                 &kp K_WWW   &kp K_WWW   &kp F3      &kp LSQUO   &kp F5      &kp F6      &kp AMPS    &kp ASTRK &kp LG(LS(Y)) &kp F10
                 &kp LDQUO   &kp RDQUO   &kp LG(S)   &kp RSQUO   &kp AT      &kp MDASH   &kp NDASH   &kp ELLIP   &kp PIPE    &kp CARET
-                &kp LG(Z)   &kp LG(X)   &LG(C)      &kp LG(V)   &bgk1       &kp GRAVE   &kp HASH    &kp BSLH    &kp FSLH    &kp CAPS
+                &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &bgk1       &kp GRAVE   &kp HASH    &kp BSLH    &kp FSLH    &kp CAPS
                                                     &trans          &trans              &mo META
             >;
             sensor-bindings = <&inc_dec_kp DOWN UP>;
