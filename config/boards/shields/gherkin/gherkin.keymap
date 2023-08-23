@@ -320,7 +320,7 @@
 
         layer_NAVIgation {
             bindings = <
-                &kp TAB &kp LC(LS(TAB)) &kp UP      &kp LC(TAB) &kp HOME    &kp PG_UP   &kp TILDE   &kp N0      &kp m000    &kp EQUAL
+                &kp TAB &kp LC(LS(TAB)) &kp UP      &kp LC(TAB) &kp HOME    &kp PG_UP   &kp TILDE   &kp N0      &m000       &kp EQUAL
                 &kp GRAVE   &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_DN   &kp RSHIFT  &kp RGUI    &kp RALT    &kp RCTRL
                &mt LSHFT N2 &kp N4 &kp LG(LA(LCTRL)) &kp INSERT &kp LBRC    &kp RBRC    &kp FSLH    &none       &kp none    &to FEAX
                                                     &kp LGUI        &trans              &kp RETURN
