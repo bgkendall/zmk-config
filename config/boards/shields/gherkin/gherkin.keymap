@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
+/* Layers */
 #define CMAK 0
 #define QWER 1
 #define FEAX 2
@@ -18,9 +19,10 @@
 #define NAVI 4
 #define NUMB 5
 #define NUML 6
-#define MET  7
-#define NUMX 8
+#define NUMX 7
+#define MET  8
 
+/* Option Symbols */
 #define LDQUO   RA(LBKT)
 #define RDQUO   RA(LBRC)
 #define LSQUO   RA(RBKT)
@@ -28,10 +30,29 @@
 #define NDASH   RA(MINUS)
 #define MDASH   RA(UNDER)
 #define ELLIP   RA(SEMI)
-#define MULTI   KP_MULTIPLY
-#define DIVID   KP_DIVIDE
+
+/* Shortcuts */
 #define SCRSHT  RG(RS(N4))
 #define TIMESHT RG(RA(RC(F10)))
+
+/* Shorter Number Pad Codes */
+#define P1      KP_NUMBER_1
+#define P2      KP_NUMBER_2
+#define P3      KP_NUMBER_3
+#define P4      KP_NUMBER_4
+#define P5      KP_NUMBER_5
+#define P6      KP_NUMBER_6
+#define P7      KP_NUMBER_7
+#define P8      KP_NUMBER_8
+#define P9      KP_NUMBER_9
+#define P0      KP_NUMBER_0
+#define PPLUS   KP_PLUS
+#define PMIN    KP_MINUS
+#define PMULT   KP_MULTIPLY
+#define PDIV    KP_DIVIDE
+#define PEQL    KP_EQUAL
+#define PDOT    KP_DOT
+
 
 &mt {
     tapping-term-ms = <175>;
