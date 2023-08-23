@@ -38,7 +38,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <10>; /* number of LEDs */
+        chain-length = <1>; /* number of LEDs */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN
@@ -49,8 +49,9 @@
 
 &pwm0 {
     status = "okay";
-    ch0-pin = <38>;
-    /* ch0-inverted; */
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-1 = <&pwm0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 / {
@@ -58,7 +59,7 @@
         compatible = "pwm-leds";
         label = "Backlight LEDs";
         pwm_led_0 {
-            pwms = <&pwm0 38>;
+            pwms = <&pwm0 38 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
             label = "Backlight LED 0";
         };
     };
