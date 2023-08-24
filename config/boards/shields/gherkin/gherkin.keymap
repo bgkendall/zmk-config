@@ -308,7 +308,7 @@
             bindings = <
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &bsdel
-                &mt LSHFT Z &kp X       &kp C       &kp V       &kp B       &mt N       &kp M       &comlp      &dotrp      &kp ESC
+                &mt LSHFT Z &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &comlp      &dotrp      &kp ESC
                                                     &lt FUNC TAB    &lt NAVI SPC        &lt NUMB RET
             >;
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
