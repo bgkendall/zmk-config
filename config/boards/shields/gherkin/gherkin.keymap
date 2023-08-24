@@ -256,7 +256,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp KP_N0 &kp KP_N0 &kp KP_N0>
+                = <&kp P0 &kp P0 &kp P0>
                 ;
         };
         m1: macro1 {
@@ -264,7 +264,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp M &kp 1>
+                = <&kp M &kp N1>
                 ;
         };
         m2: macro2 {
@@ -272,7 +272,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp M &kp 2>
+                = <&kp M &kp N2>
                 ;
         };
         bgk1: macro_bgk1 {
